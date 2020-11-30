@@ -92,12 +92,12 @@ var options = {
     $("#currentDay").text(now);
     console.log(now);
 
-
 }
 
-  CurrentDate()
-  navigator.geolocation.getCurrentPosition(weather, error, options);
+  CurrentDate();
   TopArticles();
+  navigator.geolocation.getCurrentPosition(weather, error, options);
+  
 
 
 // 2000@47.6918452,-122.2226413

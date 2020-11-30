@@ -1,8 +1,6 @@
 
 
 // using moment.js display current date / day / year in Jumbotron
-var timeFrame = [ "9 am", "10 am", "11 am", "12 am", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm"];
-var timeValue = [9,10,11,12,13,14,15,16,17,18]; 
 var contSec = document.getElementsByClassName("container");
 var rowSec = document.getElementsByClassName("timeSec");
 var divSec = document.querySelector("div");
@@ -26,19 +24,15 @@ function CurrentDate() {
 
 }
 
-
 // need to convert theses to jQuey
-    for ( var i=0; i<timeFrame.length; i++) {
-        var rowDiv = $("<div class = 'row' id = timeRow>"+"</div>");
+    for ( var i=0; i<15; i++) {
+        var rowDiv = $("<div class = 'w3-row' id = 'timeRow'>");
         divSec.append(rowDiv);
         // ser variable to select nth divs
         var timeblock = $(divSec).children('div').eq(i);
-        
-        //Schedule Time  Display
-        var colDateDiv = $("<div class ='hour time-block col-lg-2'>").text(timeFrame[i])
        
         //  Create Schedule input Section  
-        var inputSec = $("<input class ='col-lg-8 description textArea' type ='text' placeholder = 'No Schedule'>")
+        var inputSec = $("<input class ='w3-twothird description textArea' type ='text' placeholder = 'Nothing TODO'>")
         inputSec.attr("id","schedule"+[i])
         
         // Change calss attribute of input box based on Current Time [ past ] [ present ] [ future ]
@@ -49,36 +43,34 @@ function CurrentDate() {
         var saveBtn = $("<button class ='saveBtn' onclick='saveToLocal()'>").text("save");
         saveBtn.attr("style", "id = Btn"+[i]);
         // Append button to each row divs
-        timeblock.append(colDateDiv,inputSec,saveBtn);   
+        timeblock.append(inputSec,saveBtn);   
 
-        if ( timeValue[i] == currentHour)
-        { $(".textArea").attr("class","present col-lg-8 description textarea");
-        } else if (timeValue[i] <= currentHour) {
-            $(".textArea").attr("class","past col-lg-8 description textarea");
-        } else { 
-            $(".textArea").attr("class","future col-lg-8 description textarea");
-        }
-        };    
+    };
 
 
     // Save input Value to local storage funtion
     function saveToLocal(){
         // forloop here !! lets Try
         // var timeblock = $(divSec).children('div').eq(i);
-        var scheduleList = {
-            schedule9am: $("#schedule0").val(),
-            schedule10am: $("#schedule1").val(),
-            schedule11am: $("#schedule2").val(),
-            schedule12pm: $("#schedule3").val(),
-            schedule1pm: $("#schedule4").val(),
-            schedule2pm: $("#schedule5").val(),
-            schedule3pm: $("#schedule6").val(),
-            schedule4pm: $("#schedule7").val(),
-            schedule5pm: $("#schedule8").val(),
-            schedule6pm: $("#schedule9").val(),
+        var TodoList = {
+            todo1: $("#schedule0").val(),
+            todo2: $("#schedule1").val(),
+            todo3: $("#schedule2").val(),
+            todo4: $("#schedule3").val(),
+            todo5: $("#schedule4").val(),
+            todo6: $("#schedule5").val(),
+            todo7: $("#schedule6").val(),
+            todo8: $("#schedule7").val(),
+            todo9: $("#schedule8").val(),
+            todo10: $("#schedule9").val(),
+            todo11: $("#schedule10").val(),
+            todo12: $("#schedule11").val(),
+            todo13: $("#schedule12").val(),
+            todo14: $("#schedule13").val(),
+            todo15: $("#schedule14").val(),
         }
        
-    localStorage.setItem("schedule", JSON.stringify(scheduleList));
+    localStorage.setItem("schedule", JSON.stringify(TodoList));
 
     };
 
@@ -90,16 +82,22 @@ function CurrentDate() {
         // var allSchedules = localStorage.getItem("schedule"); 
        // get schedule from Local Storeage to display saved schedule
        allSchedules = JSON.parse(allSchedules);
-       $("#schedule0").attr("value", allSchedules.schedule9am);
-       $("#schedule1").attr("value", allSchedules.schedule10am);
-       $("#schedule2").attr("value", allSchedules.schedule11am);
-       $("#schedule3").attr("value", allSchedules.schedule12pm);
-       $("#schedule4").attr("value", allSchedules.schedule1pm);
-       $("#schedule5").attr("value", allSchedules.schedule2pm);
-       $("#schedule6").attr("value", allSchedules.schedule3pm);
-       $("#schedule7").attr("value", allSchedules.schedule4pm);
-       $("#schedule8").attr("value", allSchedules.schedule5pm);
-       $("#schedule9").attr("value", allSchedules.schedule6pm);
+       $("#schedule0").attr("value", allSchedules.todo1);
+       $("#schedule1").attr("value", allSchedules.todo2);
+       $("#schedule2").attr("value", allSchedules.todo3);
+       $("#schedule3").attr("value", allSchedules.todo4);
+       $("#schedule4").attr("value", allSchedules.todo5);
+       $("#schedule5").attr("value", allSchedules.todo6);
+       $("#schedule6").attr("value", allSchedules.todo7);
+       $("#schedule7").attr("value", allSchedules.todo8);
+       $("#schedule8").attr("value", allSchedules.todo9);
+       $("#schedule9").attr("value", allSchedules.todo10);
+       $("#schedule10").attr("value", allSchedules.todo11);
+       $("#schedule11").attr("value", allSchedules.todo12);
+       $("#schedule12").attr("value", allSchedules.todo13);
+       $("#schedule13").attr("value", allSchedules.todo14);
+       $("#schedule14").attr("value", allSchedules.todo15);
+       $("#schedule115").attr("value", allSchedules.todo16);
 
 
     // }

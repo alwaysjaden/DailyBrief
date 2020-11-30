@@ -40,12 +40,32 @@
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: bold;
-    
 }
 
 .newsAbstract {
-    font-size: 10px;
-    
+    font-size: 10px;  
 }
 
+.textArea {
+    color:white;
+    height:30px;
+    margin-bottom: 10px;
+    margin-right:0;
+    background-color: #d8dfea;
+    padding: 5px;
+    border: solid #afbdd4;
+
+}
+
+.saveBtn {
+    background-color: darkslategray;
+    color: white;
+    height:30px;
+    margin-bottom:10px;
+
+}
+.container {
+    width:  70%;
+    margin-left: auto;
+}
 
