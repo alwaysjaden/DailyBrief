@@ -7,12 +7,17 @@
 .navButton {
     margin-top: 5px;
 }
+.title h1 {
+    margin-bottom: 0;
+}
 .weatherIcon {
     height:35px;
     padding: 0%;
 }
 .Body h1 {
-    background-color: whitesmoke;
+    background-color: #d8dfea;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .newsCard {
@@ -27,14 +32,20 @@
 .newsCard {
     height: 300px;
     overflow: hidden;
-    background-color: whitesmoke;
+    padding: 10px;
+    background-color: #d8dfea;
 }
 .newsTitle {
     font-size: 13px;
+    margin-top: 5px;
     margin-bottom: 5px;
     font-weight: bold;
+    
 }
 
 .newsAbstract {
     font-size: 10px;
+    
 }
+
+

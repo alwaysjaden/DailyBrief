@@ -66,11 +66,15 @@ var options = {
 
         var newsImg = $("<img style='width:80%'>");
           newsImg.attr("src",newsImgSrc);
+          newsImg.attr("href",newsURL);
         var newsTit = $("<div class='newsTitle'>").text(newsTitle);
         var newsAbs = $("<div class='newsAbstract'>").text(newsAbstract);
 
-        var newsCardDiv = document.querySelectorAll(".newsCard");
+        var readMore = $("<a class='newsLink'>").text("read more");
+          readMore.attr("href",newsURL);
 
+        
+        var newsCardDiv = document.querySelectorAll(".newsCard");
         $(newsCardDiv[i]).append(newsImg, newsTit, newsAbs)
 
       }
@@ -80,9 +84,18 @@ var options = {
 
   }
  
+  function CurrentDate() {
+    var d = new Date();
+    var fmt1 = 'dddd MMMM Do ';
+    var now = moment(d).format(fmt1); 
+    // var currentHour= moment().format('HH');
+    $("#currentDay").text(now);
+    console.log(now);
 
 
-  
+}
+
+  CurrentDate()
   navigator.geolocation.getCurrentPosition(weather, error, options);
   TopArticles();
 
