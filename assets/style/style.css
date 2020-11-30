@@ -1,0 +1,40 @@
+#weather {
+    color: white;
+}
+.w3-bar {
+    height: 50px;
+}
+.navButton {
+    margin-top: 5px;
+}
+.weatherIcon {
+    height:35px;
+    padding: 0%;
+}
+.Body h1 {
+    background-color: whitesmoke;
+}
+
+.newsCard {
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+} 
+
+.topNews {
+    display: inline;
+}
+.newsCard {
+    height: 300px;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+.newsTitle {
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.newsAbstract {
+    font-size: 10px;
+}
