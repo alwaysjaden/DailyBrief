@@ -64,18 +64,17 @@ var options = {
         var newsCard = $("<div class='w3-quarter newsCard w3-card-4'>")
         $(".topNews").append(newsCard);
 
-        var newsImg = $("<img style='width:80%'>");
+        var newsImg = $("<a href='" + newsURL +"' target='_blank'> <img src='" +newsImgSrc+"'style='width:80%'></a>");
           newsImg.attr("src",newsImgSrc);
-          newsImg.attr("href",newsURL);
         var newsTit = $("<div class='newsTitle'>").text(newsTitle);
         var newsAbs = $("<div class='newsAbstract'>").text(newsAbstract);
 
-        var readMore = $("<a class='newsLink'>").text("read more");
+        var readMore = $("<a class='newsLink' target='_blank' >").text("read more");
           readMore.attr("href",newsURL);
 
         
         var newsCardDiv = document.querySelectorAll(".newsCard");
-        $(newsCardDiv[i]).append(newsImg, newsTit, newsAbs)
+        $(newsCardDiv[i]).append(newsImg, newsTit, newsAbs,readMore)
 
       }
      

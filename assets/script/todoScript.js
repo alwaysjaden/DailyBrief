@@ -26,6 +26,7 @@ function CurrentDate() {
 
 // need to convert theses to jQuey
     for ( var i=0; i<15; i++) {
+        
         var rowDiv = $("<div class = 'w3-row' id = 'timeRow'>");
         divSec.append(rowDiv);
         // ser variable to select nth divs
